@@ -6,7 +6,7 @@ import shutil
 print("Starting Organize Tool....")
 
 # your directory
-desktop_path = "~/Downloads/"
+desktop_path = "/home/iapereira/Downloads/"
 
 folders = {
     "Images": [".jpeg", ".jpg", ".png", ".gif", ".jpeg", ".jpg", ".svg", ".bitmap"],
@@ -35,8 +35,8 @@ for file_name in os.listdir(desktop_path):
                     destination_folder = os.path.join(desktop_path, folder_name)
                     print(original_file_path)
                     print(destination_folder)                
-                    shutil.move(original_file_path, destination_folder)
                     try:
+                        shutil.move(original_file_path, destination_folder)
                         os.unlink(original_file_path)
                         # print("apagou")
                     except:
