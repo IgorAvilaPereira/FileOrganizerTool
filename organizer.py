@@ -6,7 +6,7 @@ import shutil
 print("Starting Organize Tool....")
 
 # your directory
-desktop_path = "/home/iapereira/Downloads/"
+desktop_path = "~/Downloads/"
 
 folders = {
     "Images": [".jpeg", ".jpg", ".png", ".gif", ".jpeg", ".jpg", ".svg", ".bitmap"],
