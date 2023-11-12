@@ -5,8 +5,9 @@ import shutil
 
 print("Starting Organize Tool....")
 
-# your directory
-desktop_path = "~/Downloads/"
+# your Downloads directory
+desktop_path = "/home/"+os.getlogin()+"/Downloads/"
+# print(desktop_path)
 
 folders = {
     "Images": [".jpeg", ".jpg", ".png", ".gif", ".jpeg", ".jpg", ".svg", ".bitmap"],
@@ -18,7 +19,8 @@ folders = {
     "Programming": [".sql",".py",".java", ".dia", ".json", ".php", ".html", ".js", ".css", ".sh", ".dtd", ".jar", ".mwb", ".bak"],
     "Progs": [".flatpak",".deb",".exe", ".AppImage", ".flatpakref"],
     "Torrents": [".torrent"],
-    "Download": ["crdownload"]
+    "Download": ["crdownload"],
+    "Personal": [".opml"]
 }
 
 for folder_name in folders:
