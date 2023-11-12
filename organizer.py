@@ -11,11 +11,14 @@ desktop_path = "~/Downloads/"
 folders = {
     "Images": [".jpeg", ".jpg", ".png", ".gif", ".jpeg", ".jpg", ".svg", ".bitmap"],
     "Documents": [".doc", ".docx", ".pdf", ".txt",".xlsx", ".odt", ".odp", ".ods", ".PDF", ".csv", ".ppt", ".pptx"],
-    "Archives": [".zip", ".rar", ".dmg", ".iso", ".bz2", ".gz", ".7z"],
-    "Videos": [".MP4",".mp4",".mov", ".mkv", ".srt", ".avi"],
-    "Programming": [".sql",".py",".java", ".dia", ".json", ".php", ".html", ".js", ".css", ".sh", ".dtd"],
+    "Archives": [".zip", ".rar", ".dmg", ".iso", ".bz2", ".gz", ".7z", ".xz"],
+    "Videos": [".MP4",".mp4",".mov", ".mkv", ".srt", ".avi", ".webm"],
+    "Work": [".roz"],
+    "Audio": [".mp3",".wav"],
+    "Programming": [".sql",".py",".java", ".dia", ".json", ".php", ".html", ".js", ".css", ".sh", ".dtd", ".jar", ".mwb", ".bak"],
     "Progs": [".flatpak",".deb",".exe", ".AppImage", ".flatpakref"],
-    "Torrents": [".torrent"]
+    "Torrents": [".torrent"],
+    "Download": ["crdownload"]
 }
 
 for folder_name in folders:
@@ -31,18 +34,16 @@ for file_name in os.listdir(desktop_path):
     if os.path.isfile(original_file_path):
         for folder_name, extensions in folders.items():
             for extension in extensions:
-                if file_name.endswith(extension):
+                if file_name.strip().endswith(extension):
                     destination_folder = os.path.join(desktop_path, folder_name)
-                    print(original_file_path)
-                    print(destination_folder)                
+                    # print("original:"+original_file_path)
+                    # print("destination:"+destination_folder)                        
                     try:
                         shutil.move(original_file_path, destination_folder)
-                        os.unlink(original_file_path)
-                        # print("apagou")
-                    except:
+                        os.remove(original_file_path)                        
+                    except Exception as e:
                         pass
-                        # print("deu ruim!")
-                        # exit()
+                        # os.remove(original_file_path)                        
+                        # print("Exception "+ repr(e))
                     # exit()
-
 print("Done...")
