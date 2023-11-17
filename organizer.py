@@ -11,12 +11,12 @@ desktop_path = "/home/"+os.getlogin()+"/Downloads/"
 
 folders = {
     "Images": [".jpeg", ".jpg", ".png", ".gif", ".jpeg", ".jpg", ".svg", ".bitmap"],
-    "Documents": [".doc", ".docx", ".pdf", ".txt",".xlsx", ".xls", ".odt", ".odp", ".ods", ".PDF", ".csv", ".ppt", ".pptx"],
-    "Archives": [".zip", ".rar", ".dmg", ".iso", ".bz2", ".gz", ".7z", ".xz"],
+    "Documents": [".doc", ".docx", ".pdf", ".txt",".xlsx", ".xls", ".odt", ".odp", ".ods", ".PDF", ".csv", ".ppt", ".pptx", ".rtf"],
+    "Archives": [".zip", ".rar", ".dmg", ".iso", ".bz2", ".gz", ".7z", ".xz", ".tar"],
     "Videos": [".MP4",".mp4",".mov", ".mkv", ".srt", ".avi", ".webm"],
     "Work": [".roz"],
     "Audio": [".mp3",".wav"],
-    "Programming": [".SQL",".sql",".py",".java", ".dia", ".json", ".php", ".html", ".js", ".css", ".sh", ".dtd", ".jar", ".mwb", ".bak"],
+    "Programming": [".SQL",".sql",".py",".java", ".dia", ".json", ".php", ".html", ".js", ".css", ".sh", ".dtd", ".jar", ".mwb", ".bak", ".autosave"],
     "Progs": [".flatpak",".deb",".exe", ".AppImage", ".flatpakref"],
     "Torrents": [".torrent"],
     "Download": ["crdownload"],
