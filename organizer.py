@@ -41,7 +41,7 @@ for file_name in os.listdir(desktop_path):
                         shutil.move(original_file_path, destination_folder)
                         os.remove(original_file_path)                        
                     except Exception as e:
-                        # se tiver arquivos com o mesmo nome, o arquivo das subpastas eh sobreescrito pelo novo arquivo que esta em Download
+                        # se tiver arquivos com o mesmo nome, o arquivo das subpastas eh sobreescrito pelo novo arquivo que esta(va) em desktop_path 
                         os.remove(destination_folder+"/"+file_name.strip())                        
                         shutil.move(original_file_path, destination_folder)
                         # os.remove(original_file_path)                     
