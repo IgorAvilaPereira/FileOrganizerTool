@@ -7,7 +7,6 @@ print("Starting Organize Tool....")
 
 # your Downloads directory
 desktop_path = "/home/"+os.getlogin()+"/Downloads/"
-# print(desktop_path)
 
 folders = {
     "Images": [".jpeg", ".jpg", ".png", ".gif", ".jpeg", ".jpg", ".svg", ".bitmap"],
