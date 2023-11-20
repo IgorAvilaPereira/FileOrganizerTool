@@ -37,17 +37,12 @@ for file_name in os.listdir(desktop_path):
         for folder_name, extensions in folders.items():
             for extension in extensions:
                 if file_name.strip().endswith(extension):
-                    destination_folder = os.path.join(desktop_path, folder_name)
-                    # print("original:"+original_file_path)
-                    # print("destination:"+destination_folder)                        
+                    destination_folder = os.path.join(desktop_path, folder_name)                
                     try:
                         shutil.move(original_file_path, destination_folder)
                         os.remove(original_file_path)                        
                     except Exception as e:
-                        os.remove(original_file_path)                        
-                        # print("Exception "+ repr(e))
-                        # pass
-                        # os.remove(original_file_path)                        
-                        # print("Exception "+ repr(e))
-                    # exit()
+                        os.remove(destination_folder+"/"+file_name.strip())                        
+                        shutil.move(original_file_path, destination_folder)
+                        # os.remove(original_file_path)                     
 print("Done...")
