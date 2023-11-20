@@ -9,7 +9,6 @@ print("Starting Organize Tool....")
 desktop_path = "/home/"+os.getlogin()+"/Downloads/"
 # print(desktop_path)
 
-
 folders = {
     "Images": [".jpeg", ".jpg", ".png", ".gif", ".jpeg", ".jpg", ".svg", ".bitmap"],
     "Documents": [".doc", ".docx", ".pdf", ".txt",".xlsx", ".xls", ".odt", ".odp", ".ods", ".PDF", ".csv", ".ppt", ".pptx", ".rtf"],
@@ -45,7 +44,9 @@ for file_name in os.listdir(desktop_path):
                         shutil.move(original_file_path, destination_folder)
                         os.remove(original_file_path)                        
                     except Exception as e:
-                        pass
+                        os.remove(original_file_path)                        
+                        # print("Exception "+ repr(e))
+                        # pass
                         # os.remove(original_file_path)                        
                         # print("Exception "+ repr(e))
                     # exit()
