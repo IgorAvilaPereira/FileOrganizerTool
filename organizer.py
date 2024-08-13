@@ -15,8 +15,8 @@ folders = {
     "Videos": [".MP4",".mp4",".mov", ".mkv", ".srt", ".avi", ".webm"],
     "Work": [".roz"],
     "Audio": [".mp3",".wav"],
-    "Programming": [".SQL",".sql",".py",".java", ".dia", ".json", ".php", ".html", ".js", ".css", ".sh", ".dtd", ".jar", ".mwb", ".bak", ".autosave"],
-    "Progs": [".flatpak",".deb",".exe", ".AppImage", ".flatpakref"],
+    "Programming": [".draw.io", ".SQL",".sql",".py",".java", ".dia", ".json", ".php", ".html", ".js", ".css", ".sh", ".dtd", ".jar", ".mwb", ".bak", ".autosave"],
+    "Progs": [".flatpak",".deb",".exe", ".AppImage", ".flatpakref", ".whl"],
     "Torrents": [".torrent"],
     "Download": ["crdownload"],
     "Personal": [".opml"]
